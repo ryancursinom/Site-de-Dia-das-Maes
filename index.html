@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="./IMGS/siteLogo.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="script.js">
+    <title>Dia das Mães</title>
+</head>
+<script>
+    function atualizarIdade() {
+    const nascimento = new Date("2009-11-23T00:00:00"); // coloca tua data real aí se for diferente
+    const agora = new Date();
+  
+    let anos = agora.getFullYear() - nascimento.getFullYear();
+    let meses = agora.getMonth() - nascimento.getMonth();
+    let dias = agora.getDate() - nascimento.getDate();
+    let horas = agora.getHours() - nascimento.getHours();
+    let minutos = agora.getMinutes() - nascimento.getMinutes();
+    let segundos = agora.getSeconds() - nascimento.getSeconds();
+  
+    if (dias < 0) {
+      meses--;
+      const ultimoMes = new Date(agora.getFullYear(), agora.getMonth(), 0);
+      dias += ultimoMes.getDate();
+    }
+  
+    if (meses < 0) {
+      anos--;
+      meses += 12;
+    }
+  
+    document.getElementById("idadeTimer").innerText = 
+      `${anos} anos, ${meses} meses, ${dias} dias, ${horas}horas, ${minutos}minutos e ${segundos}segundos`;
+  }
+  
+  // Atualiza a cada segundo (pra sempre tá certinho)
+  setInterval(atualizarIdade, 1000);
+  atualizarIdade(); // roda uma vez já de cara
+</script>
+<body>
+    <header>
+        <h1>Feliz Dia das Mães - Vocês são guerreiras</h1>
+        <nav>
+            <a href="#">Home</a>
+            <a href="fotos.html">Fotos</a>
+            <a href="videos.html">Vídeos</a>
+        </nav>
+    </header>
+    <main>
+        <p><b>Mãe</b>, eu não tenho palavras para descrever o amor que eu sinto por você, você é o que me motiva a ser uma pessoa melhor todos os dias, mesmo sabendo que nada que eu fizer será igualado ao tanto que você já fez e faz por mim. Desde que eu nasci, você dedicou a maior parte dos seus dias para me educar, me dar carinho e muito amor, por isso o homem que eu estou me tornando e as conquistas que eu estou tendo devo a você!! Obrigado por ser essa mãe guerreira, paciente, amorosa, e que me dá uns puxões de orelha quando eu to errado, porque se não fosse isso eu não seria o Ryan que eu sou hoje!! Eu sempre estou dizendo que te amo e tals, mas nunca conseguirei expressar de forma absoluta o amor imensurável que eu sinto por você!! Te amo, e obrigado por me amar e cuidar de mim, a gente até o fim!! ❤️❤️❤️❤️</p>
+    </main>
+
+    <div class="idade-container">
+        <p>Nos conectamos há:</p>
+        <div id="idadeTimer"></div>
+      </div>
+    
+
+    <section id="dedicatoria">
+        <iframe style="border-radius:12px" src="https://open.spotify.com/embed/track/05QeyKGAn4TZrv41tMiD1A?utm_source=generator" width="40%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+        <p>Essa música diz muito a respeito de nós dois, pois eu sinto que tendo você ao meu lado não preciso de mais ninguém, uma vez que você é minha mãe, melhor amiga, conselheira, educadora, e mais tantas outras coisas. E com essa música quero lhe dizer que pretendo aproveitar cada conquita da minha vida ao seu lado, pois "a vida é trem bala parceiro, e a gente é só passageiro prestes a partir!"</p>
+    </section>
+    
+    <footer>
+        &copy; Todos os direitos reservados &reg;
+        <p>Siga o criador nas redes sociais</p>
+        <ul class="box-redes-sociais">
+            <li class="facebook">
+              <a href="#"><i class="fab fa-facebook-f icon"></i></a>
+            </li>
+          
+            <li class="instagram">
+              <a target="_blank" href="https://www.instagram.com/ryancursinom/?next=%2F"><i class="fab fa-instagram icon"></i></a>
+            </li>
+
+            <li class="snapchat">
+                <a href="#"><i class="fab fa-snapchat icon"></i></a>
+            </li>
+
+            <li class="github">
+                <a href="#"><i class="fab fa-github icon"></i></a>
+            </li>
+        </ul> 
+    </footer>
+</body>
+</html>
