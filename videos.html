@@ -21,10 +21,10 @@
     <section id="videos">
         <h2>Nossas palhaçadas e momentos divertidos 😁🤪</h2>
         <div class="flex-container">
-            <video src="./IMGS/dancinha.mp4" type="video/mp4" ></video>
-            <video src="./IMGS/santos1.mp4" type="video/mp4" ></video>
-            <video src="./IMGS/santos2.mp4" type="video/mp4" ></video>
-            <video src="./IMGS/santos3.mp4" type="video/mp4" ></video>
+            <video src="./IMGS/dancinha.mp4" type="video/mp4" controls></video>
+            <video src="./IMGS/santos1.mp4" type="video/mp4" control></video>
+            <video src="./IMGS/santos2.mp4" type="video/mp4" controls></video>
+            <video src="./IMGS/santos3.mp4" type="video/mp4" controls></video>
         </div>
     </section>
 
@@ -52,18 +52,3 @@
     </footer>
 </body>
 </html>
-
-<script>
-    const videos = document.querySelectorAll('video');
-  
-    videos.forEach(video => {
-      video.addEventListener('mouseenter', () => {
-        video.play();
-      });
-  
-      video.addEventListener('mouseleave', () => {
-        video.pause();
-        video.currentTime = 0; // volta pro começo quando o mouse sai
-      });
-    });
-  </script>
